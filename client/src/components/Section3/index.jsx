@@ -8,6 +8,7 @@ import stadium from '../../assets/stadium.png'
 export const BlackBG = styled.div`
     background: black;
     height: 500px;
+    
 `;
 
 export const TopPara = styled.p`
@@ -43,20 +44,6 @@ const Section3 = () => {
                 </div>
                 <img className='' height={450} src={stadium} alt="stadium" />
             </div>
-            {/* <Box sx={{ flexGrow: 1, padding: 10 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={6}>
-                        <TopPara>Betting</TopPara>
-                        <MidPara>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, tenetur obcaecati?</MidPara>
-                        <LastPara>Lorem ipsum dolor sit amet consectetur adipisicing elit. </LastPara>
-                        <Button sx={{marginRight: 2}} variant="contained">Button</Button>
-                        <Button variant="contained">Button</Button>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <img height={400} src={stadium} alt="stadium" />
-                    </Grid>
-                </Grid>
-            </Box> */}
         </BlackBG>
     </>
   )
