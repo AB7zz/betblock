@@ -8,6 +8,7 @@ import stadium from '../../assets/stadium.png'
 export const BlackBG = styled.div`
     background: black;
     height: 500px;
+    
 `;
 
 export const TopPara = styled.p`
@@ -33,7 +34,7 @@ const Section3 = () => {
     <>
         <br />
         <BlackBG>
-            <Box sx={{ flexGrow: 1, padding: 10 }}>
+            <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
                         <TopPara>Betting</TopPara>
