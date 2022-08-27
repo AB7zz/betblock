@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import { Navbar, Section3, Section5 } from './components'
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './pages'
+
+
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Section3 />
-      <Section5 />
-    </>
-  )
+    <Router>
+      <Switch>
+        <Route path='/' component={Home} exact/>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App
+  
+
+
+
+

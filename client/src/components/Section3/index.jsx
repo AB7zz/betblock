@@ -33,7 +33,17 @@ const Section3 = () => {
     <>
         <br />
         <BlackBG>
-            <Box sx={{ flexGrow: 1, padding: 10 }}>
+            <div className='d-flex p-3'>
+                <div className='p-5'>
+                    <TopPara>Betting</TopPara>
+                    <MidPara>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, tenetur obcaecati?</MidPara>
+                    <LastPara>Lorem ipsum dolor sit amet consectetur adipisicing elit. </LastPara>
+                    <Button sx={{marginRight: 2}} variant="contained">Button</Button>
+                    <Button variant="contained">Button</Button>
+                </div>
+                <img className='' height={450} src={stadium} alt="stadium" />
+            </div>
+            {/* <Box sx={{ flexGrow: 1, padding: 10 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
                         <TopPara>Betting</TopPara>
@@ -46,7 +56,7 @@ const Section3 = () => {
                         <img height={400} src={stadium} alt="stadium" />
                     </Grid>
                 </Grid>
-            </Box>
+            </Box> */}
         </BlackBG>
     </>
   )
