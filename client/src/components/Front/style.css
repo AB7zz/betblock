@@ -1,0 +1,57 @@
+.banner {
+    background-image: url(../../assets/Front.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.banner-txt{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7rem;
+
+
+}
+
+.banner-txt2{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-txt3{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    
+}
+.icon-txt {
+    margin: 0;
+    font-size: 50px;
+}
+
+.icon-txt2 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.button {
+    background-color: #fbfffb;
+    border:20px;
+    border-color: #332e7f;
+    color: #0b0b0b;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    height:50px;
+    width: 100px;
+  }
