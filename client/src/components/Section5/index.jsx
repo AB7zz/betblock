@@ -13,6 +13,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import img1 from '../../assets/rmvsliverpool.png'
 import img2 from '../../assets/barcavsrm.png'
+import TextField from '@mui/material/TextField';
 
 export const TopPara = styled.p`
   color: #FF1F00;
@@ -87,20 +88,26 @@ const Section5 = () => {
             aria-labelledby="responsive-dialog-title"
           >
             <DialogTitle id="responsive-dialog-title">
-              {"Use Google's location service?"}
+              {"Which team do you want to bet on?"}
             </DialogTitle>
+            <br />
             <DialogContent>
-              <DialogContentText>
-                Let Google help apps determine location. This means sending anonymous
-                location data to Google, even when no apps are running.
-              </DialogContentText>
+              <TextField
+                id="outlined-number"
+                label="Number"
+                type="number"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
             </DialogContent>
-            <DialogActions>
-              <Button autoFocus onClick={handleClose}>
-                Disagree
+            <DialogActions
+            sx = {{justifyContent: 'space-evenly'}}>
+              <Button variant='outlined' autoFocus onClick={handleClose}>
+                Liverpool
               </Button>
-              <Button onClick={handleClose} autoFocus>
-                Agree
+              <Button variant='outlined' onClick={handleClose} autoFocus>
+                Real Madrid
               </Button>
             </DialogActions>
           </Dialog>
