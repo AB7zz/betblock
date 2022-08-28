@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { BettingContext } from '../../Context/BettingContext';
 
 const pages = ['About Us', 'Schedule', 'Team', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -20,6 +21,8 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const { connectWallet } = React.useContext(BettingContext)
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -132,7 +135,7 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Button variant="contained">Connect Wallet</Button>
+            <Button onClick={connectWallet} variant="contained">Connect Wallet</Button>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
