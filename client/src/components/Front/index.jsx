@@ -1,8 +1,13 @@
 import * as React from 'react';
 import './style.css';
-import { Button } from '@mui/material'
+import Button from '@mui/material/Button';
 
 export default function Front() {
+  const boxSX = {
+    "&:hover": {
+      color: 'white'
+    },
+  };
   return (
     
       <div className='banner'>
@@ -16,7 +21,7 @@ export default function Front() {
           <h1 style={{fontSize: 120, color: 'white'}}>Bet</h1>
         </div>
         <div className='banner-txt3'>
-          <Button href='/bet' variant="contained">Bet now !</Button>
+          <Button href='/bet' sx={boxSX} variant="contained">Bet now !</Button>
         </div>
       </div>
       
