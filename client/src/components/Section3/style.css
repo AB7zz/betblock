@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1010px){
+    .rightimg{
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 885px){
+    .rightimg{
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .rightimg{
+        height: 200px;
+    }
+}

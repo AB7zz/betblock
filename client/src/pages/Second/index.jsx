@@ -1,10 +1,12 @@
 import React from 'react'
-import {Section5} from '../../components'
+import {Section5, Navbar, Footer} from '../../components'
 
 const index = () => {
   return (
     <>
-        <Section5 />
+      <Navbar />
+      <Section5 />
+      <Footer />
     </>
   )
 }
