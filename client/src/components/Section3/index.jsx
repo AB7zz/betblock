@@ -32,7 +32,6 @@ export const LastPara = styled.p`
 const Section3 = () => {
   return (
     <>
-        <br />
         <BlackBG>
             <div className='d-flex p-3'>
                 <div className='p-5'>

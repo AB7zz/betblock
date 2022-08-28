@@ -1,14 +1,18 @@
-import React from 'react'
+import * as React from 'react'
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 import './style.css'
 import styled from 'styled-components'
-// import Grid from '@mui/material/Grid';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Realmadrid from '../../assets/Realmadrid.png'
-import Liverpool from '../../assets/Liverpool.png'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import img1 from '../../assets/rmvsliverpool.png'
+import img2 from '../../assets/barcavsrm.png'
 
 export const TopPara = styled.p`
   color: #FF1F00;
@@ -40,22 +44,72 @@ export const VS = styled.h1`
   font-size: 75px;
 `
 const Section5 = () => {
+  // const [openrvl, setOpenrvl] = React.useState(false);
+  // const [openbvl, setOpenbvl] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+  // const rmvsliverpool = () => {
+  //   setOpenrvl(true);
+  // };
+
+  // const bvsreal = () => {
+  //   setOpenbvl(true);
+  // };
+  // const handleClose = () => {
+  //   setOpenrvl(false);
+  //   setOpenbvl(false);
+  // };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <div className="BGCover">
-      <div style={{backgroundColor: 'rgba(0,0,0,0.5)', padding: 10, height: '100%'}}>
-        <div className='d-flex'>
-          <img className='' src={Liverpool} alt="real madrid" />
-          <div>
-            <TopPara>Today's Hot Match</TopPara>
-            <MidPara>CHAMPIONS LEAGUE</MidPara>
-            <BtmPara>Time 8:30 PM - September 2022</BtmPara>
-            <VS>VS</VS>
-          </div>
-          <img className='' src={Realmadrid} alt="real madrid" />
-        </div>
-        <Button variant="contained">Bet Now !</Button>
+    <Carousel
+    autoPlay = {true}
+    showIndicators={false}
+    style={{margin: 0}}
+    showThumbs={false}
+    infiniteLoop={true}
+    >
+      <div>
+          <img src={img1} />
+          <Button onClick={handleClickOpen} variant="outlined">Bet Now !</Button>
+          <Dialog
+            fullScreen={fullScreen}
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="responsive-dialog-title"
+          >
+            <DialogTitle id="responsive-dialog-title">
+              {"Use Google's location service?"}
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                Let Google help apps determine location. This means sending anonymous
+                location data to Google, even when no apps are running.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button autoFocus onClick={handleClose}>
+                Disagree
+              </Button>
+              <Button onClick={handleClose} autoFocus>
+                Agree
+              </Button>
+            </DialogActions>
+          </Dialog>
       </div>
-    </div>
+      <div>
+          <img src={img2} />
+          <Button onClick={handleClickOpen} variant="outlined">Bet Now !</Button>
+      </div>
+  </Carousel>
   )
 }
 

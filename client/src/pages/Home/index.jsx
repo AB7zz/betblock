@@ -1,11 +1,11 @@
-import { Navbar, Section3, Section5 } from '../components';
+import { Navbar, Front, Section3 } from '../../components';
 
 const Home = () => {
   return (
     <>
       <Navbar />
+      <Front />
       <Section3 />
-      <Section5 />
     </>
   )
 }
